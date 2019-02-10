@@ -257,8 +257,8 @@
 					//On gère les accusés de reception
 					if (trim($text) == 'Delivered' || trim($text) == 'Failed')
 					{
-						echo 'Delivered or Failed SMS for ' . $number . "\n";
-						$this->wlog('Delivered or Failed SMS for ' . $number);
+						echo trim($text).' SMS for ' . $number . "\n";
+						$this->wlog(trim($text).' SMS for ' . $number);
 
 						//On récupère les SMS pas encore validé, uniquement sur les dernières 12h
 						$now = new DateTime();
